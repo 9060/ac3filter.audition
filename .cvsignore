@@ -1,0 +1,17 @@
+*.log
+*.exe
+*.dll
+
+*.aps
+*.ncb
+*.plg
+*.opt
+*.dep
+
+Debug
+Release
+Debug_libc
+Release_libc
+Perf
+
+Changelog

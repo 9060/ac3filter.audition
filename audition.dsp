@@ -94,12 +94,6 @@ LINK32=link.exe
 # Name "audition - Win32 Release Libc"
 # Begin Source File
 
-SOURCE=.\AU.C
-# PROP BASE Exclude_From_Build 1
-# PROP Exclude_From_Build 1
-# End Source File
-# Begin Source File
-
 SOURCE=.\audition.cpp
 # End Source File
 # Begin Source File
@@ -121,11 +115,6 @@ SOURCE=.\dbglog.h
 # Begin Source File
 
 SOURCE=.\filters.h
-# End Source File
-# Begin Source File
-
-SOURCE=.\mp3.c
-# PROP Exclude_From_Build 1
 # End Source File
 # Begin Source File
 

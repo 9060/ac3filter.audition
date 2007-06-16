@@ -463,6 +463,11 @@ __declspec(dllexport) DWORD FAR PASCAL FilterGetOptions(HWND hWnd, HINSTANCE hIn
   int retval = 0;
   FARPROC lpfnDIALOGMsgProc;
   lpfnDIALOGMsgProc = GetProcAddress(hInst, (LPCSTR)MAKELONG(20,0));
+
+  // sample rate: 18bit (up to 256kHz)
+  // bps: 6bit (up to 64bit)
+  // channels: 4bit (up to 16 channels)
+  dwOptions = lSamprate | (wBitsPerSample << 18) | (wChannels << 24);
   
   return DialogBoxParam(hInst, MAKEINTRESOURCE(IDD_CONFIG), hWnd, (DLGPROC)lpfnDIALOGMsgProc, dwOptions);
 }
@@ -495,7 +500,7 @@ __declspec(dllexport) BOOL FAR PASCAL DIALOGMsgProc(HWND hWndDlg, UINT Message, 
   case WM_INITDIALOG:
   {
     int i;
-    char buf[32];
+    char buf[128];
     const int bitrate_tbl[19] = 
     {
        32000,  40000,  48000,  56000,  64000,  80000,  96000, 112000, 128000, 
@@ -522,6 +527,13 @@ __declspec(dllexport) BOOL FAR PASCAL DIALOGMsgProc(HWND hWndDlg, UINT Message, 
       if (bitrate_tbl[i] == bitrate)
         SendDlgItemMessage(hWndDlg, IDC_CMB_BITRATE, CB_SETCURSEL, cb_index, 0);
     }
+
+    // input format
+    int sample_rate = lParam & 0x3ffff;
+    int bps = (lParam >> 18) & 0x3f;
+    int nch = (lParam >> 24) & 0xf;
+    sprintf(buf, "%ich %iHz %ibit", nch, sample_rate, bps);
+    SetDlgItemText(hWndDlg, IDC_EDT_FORMAT, buf);
 
     return TRUE;
   }
