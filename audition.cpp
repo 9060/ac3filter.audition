@@ -84,7 +84,8 @@ public:
       return false;
     }
     file_spk = file.get_spk();
-    file.stream_info(info_buf, array_size(info_buf));
+    sprintf(info_buf, "%s %s %iHz", file_spk.format_text(), file_spk.mode_text(), file_spk.sample_rate);
+//    file.stream_info(info_buf, array_size(info_buf));
 
     // Reset everything
     file.seek(0);
