@@ -1,0 +1,5 @@
+v0.1b - 09.08.2007
+  * Initial release
+  * Built on AC3Filter 1.46 code base
+  * Reads AC3 and DTS files
+  * Writes mono/stereo AC3 files (bitrate ajustable)
