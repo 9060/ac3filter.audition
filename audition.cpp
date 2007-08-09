@@ -173,12 +173,6 @@ public:
 
       if (file.load_frame())
       {
-
-#ifdef _DEBUG
-        double q = 1.0;
-        for (int i = 0; i < 15000; i++)
-          q *= M_PI;
-#endif
         Chunk chunk;
         chunk.set_rawdata(file.get_spk(), file.get_frame(), file.get_frame_size());
         if (!dec.process(&chunk)) return 0;
@@ -260,11 +254,6 @@ public:
     size_t out_size = 0;
     while (!chain.is_empty())
     {
-#ifdef _DEBUG
-        double q = 1.0;
-        for (int i = 0; i < 15000; i++)
-          q *= M_PI;
-#endif
       if (!chain.get_chunk(&chunk)) return 0;
       if (!sink.process(&chunk)) return 0;
       out_size += chunk.size;
