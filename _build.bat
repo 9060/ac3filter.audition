@@ -87,7 +87,7 @@ system('msdev audition.dsp /MAKE "audition - Win32 Release Libc" /REBUILD')
 
 `copy _readme.txt $package\\ac3filter_readme.txt`;
 `copy _changes.txt $package\\ac3filter_changes.txt`;
-`copy gpl.txt $package\\ac3filter_license`;
+`copy gpl.txt $package\\ac3filter_license.txt`;
 
 
 ###############################################################################
