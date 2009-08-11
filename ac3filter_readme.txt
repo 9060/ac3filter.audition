@@ -8,7 +8,7 @@ files and write AC3 files.
 This plugin is a part of AC3Fiter project. AC3Filter is a set of high quality
 freeware audio decoder and processor programs. See more at http://ac3filter.net.
 
-Copyright (c) 2007 by Alexander Vigovsky (xvalex@mail.ru)
+Copyright (c) 2007-2009 by Alexander Vigovsky (ac3filter@gmail.com)
 
 
 Install:
@@ -42,7 +42,6 @@ Links:
 
 http://ac3filter.net                         - Project home page
 http://ac3filter.net/forum                   - Support forum
-http://sourceforge.net/projects/ac3filter    - Sourceforge project page
 
 
 Donate:
@@ -54,7 +53,5 @@ http://order.kagi.com/?6CZJZ&lang=en
 Contact Author: 
 ===============
 
-mailto:xvalex@mail.ru?Subject=AC3Filter
-
-Please write in English or Russian. Subject should have 'AC3Filter' word 
-otherwise it may be accidentally deleted with tons of other junk mail.
+mailto:ac3filter@gmail.com
+Please write in English or Russian only.

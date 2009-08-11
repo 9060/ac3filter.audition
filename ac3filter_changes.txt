@@ -1,5 +1,6 @@
-v0.2a - not released yet
-  * Overflow clipping fixed (issue 39)
+v0.2a - 11.08.2009
+  * Built using AC3Filter 1.62 code
+  * Overflow fixed (issue 39)
 
 
 v0.1a - 09.08.2007
